@@ -1,0 +1,71 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_Moose_Util_TypeConstraints {
+	label="Moose::Util::TypeConstraints";
+	"Moose::Util::TypeConstraints::BEGIN@30";
+}
+subgraph cluster_Moose_Meta_TypeConstraint_Parameterized {
+	label="Moose::Meta::TypeConstraint::Parameterized";
+	"Moose::Meta::TypeConstraint::Parameterized::BEGIN@4";
+	"Moose::Meta::TypeConstraint::Parameterized::BEGIN@15";
+	"Moose::Meta::TypeConstraint::Parameterized::BEGIN@8";
+	"Moose::Meta::TypeConstraint::Parameterized::BEGIN@7";
+	"Moose::Meta::TypeConstraint::Parameterized::BEGIN@5";
+	"Moose::Meta::TypeConstraint::Parameterized::BEGIN@3";
+	"Moose::Meta::TypeConstraint::Parameterized::BEGIN@9";
+}
+subgraph cluster_metaclass {
+	label="metaclass";
+	"metaclass::import";
+}
+subgraph cluster_Moose_Meta_TypeConstraint_Parameterizable {
+	label="Moose::Meta::TypeConstraint::Parameterizable";
+	"Moose::Meta::TypeConstraint::Parameterizable::BEGIN@13";
+	"Moose::Meta::TypeConstraint::Parameterizable::BEGIN@12";
+	"Moose::Meta::TypeConstraint::Parameterizable::BEGIN@11";
+	"Moose::Meta::TypeConstraint::Parameterizable::BEGIN@4";
+	"Moose::Meta::TypeConstraint::Parameterizable::BEGIN@5";
+	"Moose::Meta::TypeConstraint::Parameterizable::BEGIN@3";
+	"Moose::Meta::TypeConstraint::Parameterizable::meta";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Class_MOP_Mixin_HasAttributes {
+	label="Class::MOP::Mixin::HasAttributes";
+	"Class::MOP::Mixin::HasAttributes::add_attribute";
+}
+"Moose::Util::TypeConstraints::BEGIN@30" -> "Moose::Meta::TypeConstraint::Parameterized::BEGIN@7";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@7" -> "Exporter::import";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@9" -> "Moose::Meta::TypeConstraint::Parameterizable::meta";
+"Moose::Util::TypeConstraints::BEGIN@30" -> "Moose::Meta::TypeConstraint::Parameterized::BEGIN@4";
+"Moose::Util::TypeConstraints::BEGIN@30" -> "Moose::Meta::TypeConstraint::Parameterized::BEGIN@8";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@9" -> "Moose::Meta::TypeConstraint::Parameterizable::BEGIN@12";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@5" -> "metaclass::import";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@9" -> "Moose::Meta::TypeConstraint::Parameterizable::BEGIN@4";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@9" -> "Moose::Meta::TypeConstraint::Parameterizable::BEGIN@3";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@9" -> "Class::MOP::Mixin::HasAttributes::add_attribute";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@9" -> "Moose::Meta::TypeConstraint::Parameterizable::BEGIN@5";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@15" -> "base::import";
+"Moose::Util::TypeConstraints::BEGIN@30" -> "Moose::Meta::TypeConstraint::Parameterized::BEGIN@3";
+"Moose::Util::TypeConstraints::BEGIN@30" -> "Moose::Meta::TypeConstraint::Parameterized::BEGIN@5";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@4" -> "warnings::import";
+"Moose::Util::TypeConstraints::BEGIN@30" -> "Moose::Meta::TypeConstraint::Parameterized::BEGIN@15";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@9" -> "Moose::Meta::TypeConstraint::Parameterizable::BEGIN@13";
+"Moose::Util::TypeConstraints::BEGIN@30" -> "Moose::Meta::TypeConstraint::Parameterized::BEGIN@9";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@9" -> "Moose::Meta::TypeConstraint::Parameterizable::BEGIN@11";
+"Moose::Meta::TypeConstraint::Parameterized::BEGIN@3" -> "strict::import";
+}

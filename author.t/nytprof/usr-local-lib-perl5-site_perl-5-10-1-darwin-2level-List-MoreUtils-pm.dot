@@ -1,0 +1,55 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_DynaLoader {
+	label="DynaLoader";
+	"DynaLoader::bootstrap";
+}
+subgraph cluster_List_MoreUtils {
+	label="List::MoreUtils";
+	"List::MoreUtils::all";
+	"List::MoreUtils::BEGIN@8";
+	"List::MoreUtils::bootstrap";
+	"List::MoreUtils::BEGIN@4";
+	"List::MoreUtils::uniq";
+	"List::MoreUtils::BEGIN@3";
+	"List::MoreUtils::any";
+	"List::MoreUtils::firstidx";
+}
+subgraph cluster_vars {
+	label="vars";
+	"vars::import";
+}
+subgraph cluster_Moose_Exporter {
+	label="Moose::Exporter";
+	"Moose::Exporter::_follow_also";
+	"Moose::Exporter::_strip_traits";
+	"Moose::Exporter::BEGIN@12";
+	"Moose::Exporter::_strip_metaclass";
+}
+subgraph cluster_Moose_Util_TypeConstraints {
+	label="Moose::Util::TypeConstraints";
+	"Moose::Util::TypeConstraints::subtype";
+	"Moose::Util::TypeConstraints::type";
+}
+subgraph cluster_Scalar_Util {
+	label="Scalar::Util";
+	"Scalar::Util::reftype";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+"Moose::Exporter::BEGIN@12" -> "List::MoreUtils::BEGIN@4";
+"Moose::Exporter::BEGIN@12" -> "List::MoreUtils::BEGIN@8";
+"List::MoreUtils::all" -> "Scalar::Util::reftype";
+"List::MoreUtils::any" -> "Scalar::Util::reftype";
+"DynaLoader::bootstrap" -> "List::MoreUtils::bootstrap";
+"Moose::Exporter::_follow_also" -> "List::MoreUtils::uniq";
+"Moose::Exporter::_strip_traits" -> "List::MoreUtils::firstidx";
+"Moose::Exporter::_strip_metaclass" -> "List::MoreUtils::firstidx";
+"List::MoreUtils::BEGIN@8" -> "vars::import";
+"Moose::Util::TypeConstraints::subtype" -> "List::MoreUtils::all";
+"Moose::Util::TypeConstraints::type" -> "List::MoreUtils::any";
+"Moose::Exporter::BEGIN@12" -> "List::MoreUtils::BEGIN@3";
+"List::MoreUtils::BEGIN@4" -> "strict::import";
+}

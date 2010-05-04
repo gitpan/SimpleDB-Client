@@ -1,0 +1,53 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_warnings {
+	label="warnings";
+	"warnings::import";
+}
+subgraph cluster_Moose_Util_TypeConstraints {
+	label="Moose::Util::TypeConstraints";
+	"Moose::Util::TypeConstraints::BEGIN@29";
+}
+subgraph cluster_metaclass {
+	label="metaclass";
+	"metaclass::import";
+}
+subgraph cluster_base {
+	label="base";
+	"base::import";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+}
+subgraph cluster_Moose_Meta_TypeCoercion_Union {
+	label="Moose::Meta::TypeCoercion::Union";
+	"Moose::Meta::TypeCoercion::Union::BEGIN@6";
+	"Moose::Meta::TypeCoercion::Union::BEGIN@8";
+	"Moose::Meta::TypeCoercion::Union::BEGIN@4";
+	"Moose::Meta::TypeCoercion::Union::BEGIN@14";
+	"Moose::Meta::TypeCoercion::Union::BEGIN@5";
+}
+subgraph cluster_Moose_Meta_TypeConstraint_Union {
+	label="Moose::Meta::TypeConstraint::Union";
+	"Moose::Meta::TypeConstraint::Union::BEGIN@4";
+	"Moose::Meta::TypeConstraint::Union::BEGIN@5";
+	"Moose::Meta::TypeConstraint::Union::BEGIN@6";
+	"Moose::Meta::TypeConstraint::Union::BEGIN@8";
+	"Moose::Meta::TypeConstraint::Union::BEGIN@14";
+}
+"Moose::Util::TypeConstraints::BEGIN@29" -> "Moose::Meta::TypeConstraint::Union::BEGIN@5";
+"Moose::Util::TypeConstraints::BEGIN@29" -> "Moose::Meta::TypeConstraint::Union::BEGIN@14";
+"Moose::Meta::TypeConstraint::Union::BEGIN@8" -> "Moose::Meta::TypeCoercion::Union::BEGIN@5";
+"Moose::Meta::TypeConstraint::Union::BEGIN@8" -> "Moose::Meta::TypeCoercion::Union::BEGIN@4";
+"Moose::Util::TypeConstraints::BEGIN@29" -> "Moose::Meta::TypeConstraint::Union::BEGIN@8";
+"Moose::Meta::TypeConstraint::Union::BEGIN@6" -> "metaclass::import";
+"Moose::Meta::TypeConstraint::Union::BEGIN@8" -> "Moose::Meta::TypeCoercion::Union::BEGIN@14";
+"Moose::Util::TypeConstraints::BEGIN@29" -> "Moose::Meta::TypeConstraint::Union::BEGIN@4";
+"Moose::Meta::TypeConstraint::Union::BEGIN@14" -> "base::import";
+"Moose::Meta::TypeConstraint::Union::BEGIN@8" -> "Moose::Meta::TypeCoercion::Union::BEGIN@6";
+"Moose::Meta::TypeConstraint::Union::BEGIN@5" -> "warnings::import";
+"Moose::Util::TypeConstraints::BEGIN@29" -> "Moose::Meta::TypeConstraint::Union::BEGIN@6";
+"Moose::Meta::TypeConstraint::Union::BEGIN@8" -> "Moose::Meta::TypeCoercion::Union::BEGIN@8";
+"Moose::Meta::TypeConstraint::Union::BEGIN@4" -> "strict::import";
+}

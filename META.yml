@@ -24,5 +24,5 @@ requires:
   Test::More: 0
   Time::HiRes: 1.9719
   URI: 0
-  XML::Simple: 0
-version: 1.0400
+  XML::Bare: 0.45
+version: 1.0401

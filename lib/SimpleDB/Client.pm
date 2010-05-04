@@ -1,5 +1,5 @@
 package SimpleDB::Client;
-our $VERSION = '1.0400';
+our $VERSION = '1.0401';
 
 =head1 NAME
 
@@ -7,7 +7,7 @@ SimpleDB::Client - The network interface to the SimpleDB service.
 
 =head1 VERSION
 
-version 1.0400
+version 1.0401
 
 =head1 SYNOPSIS
 
@@ -50,7 +50,7 @@ The following methods are available from this class.
 
 use Moose;
 use Digest::SHA qw(hmac_sha256_base64);
-use XML::Simple;
+use XML::Bare;
 use LWP::UserAgent;
 use HTTP::Request;
 use Time::HiRes qw(usleep);
@@ -247,7 +247,10 @@ The L<HTTP::Response> object created by the C<send_request> method.
 
 sub handle_response {
     my ($self, $response) = @_;
-    my $content = eval {XML::Simple::XMLin($response->content, ForceArray => ['Item'])};
+    my $content = eval {XML::Bare::xmlin($response->content)};
+    if (exists $content->{SelectResult}{Item} && ref $content->{SelectResult}{Item} ne 'ARRAY') { # force an item list into an array
+          $content->{SelectResult}{Item} = [ $content->{SelectResult}{Item} ];
+    }
 
     # choked reconstituing the XML, probably because it wasn't XML
     if ($@) {

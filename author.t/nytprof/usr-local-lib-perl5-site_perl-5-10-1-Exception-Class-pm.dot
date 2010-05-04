@@ -1,0 +1,91 @@
+digraph {
+graph [overlap=false]
+subgraph cluster_SimpleDB_Client_Exception {
+	label="SimpleDB::Client::Exception";
+	"SimpleDB::Client::Exception::BEGIN@50";
+	"SimpleDB::Client::Exception::BEGIN@3";
+}
+subgraph cluster_UNIVERSAL {
+	label="UNIVERSAL";
+	"UNIVERSAL::isa";
+}
+subgraph cluster_SimpleDB_Client_Exception_Response {
+	label="SimpleDB::Client::Exception::Response";
+	"SimpleDB::Client::Exception::Response::BEGIN@3";
+}
+subgraph cluster_strict {
+	label="strict";
+	"strict::import";
+	"strict::unimport";
+}
+subgraph cluster_SimpleDB_Client_Exception_Connection {
+	label="SimpleDB::Client::Exception::Connection";
+	"SimpleDB::Client::Exception::Connection::BEGIN@3";
+}
+subgraph cluster_Exporter {
+	label="Exporter";
+	"Exporter::import";
+}
+subgraph cluster_Exception_Class_Base {
+	label="Exception::Class::Base";
+	"Exception::Class::Base::BEGIN@3";
+	"Exception::Class::Base::BEGIN@36";
+	"Exception::Class::Base::BEGIN@43";
+	"Exception::Class::Base::BEGIN@9";
+	"Exception::Class::Base::BEGIN@65";
+	"Exception::Class::Base::BEGIN@30";
+	"Exception::Class::Base::BEGIN@8";
+	"Exception::Class::Base::BEGIN@4";
+	"Exception::Class::Base::BEGIN@11";
+	"Exception::Class::Base::BEGIN@14";
+}
+subgraph cluster_Exception_Class {
+	label="Exception::Class";
+	"Exception::Class::_make_parents";
+	"Exception::Class::BEGIN@78";
+	"Exception::Class::BEGIN@8";
+	"Exception::Class::_make_subclass";
+	"Exception::Class::BEGIN@5";
+	"Exception::Class::import";
+	"Exception::Class::BEGIN@168";
+	"Exception::Class::BEGIN@45";
+	"Exception::Class::BEGIN@11";
+	"Exception::Class::BEGIN@7";
+	"Exception::Class::BEGIN@3";
+	"Exception::Class::CORE:sort";
+	"Exception::Class::CORE:subst";
+}
+"Exception::Class::_make_subclass" -> "SimpleDB::Client::Exception::Connection::BEGIN@3";
+"Exception::Class::BEGIN@8" -> "Exporter::import";
+"Exception::Class::BEGIN@7" -> "Exception::Class::Base::BEGIN@9";
+"Exception::Class::BEGIN@7" -> "Exception::Class::Base::BEGIN@65";
+"Exception::Class::BEGIN@7" -> "Exception::Class::Base::BEGIN@36";
+"SimpleDB::Client::Exception::BEGIN@50" -> "Exception::Class::BEGIN@168";
+"Exception::Class::BEGIN@7" -> "Exception::Class::Base::BEGIN@11";
+"Exception::Class::_make_parents" -> "Exception::Class::_make_subclass";
+"Exception::Class::import" -> "Exception::Class::_make_subclass";
+"Exception::Class::BEGIN@7" -> "Exception::Class::Base::BEGIN@14";
+"Exception::Class::_make_subclass" -> "SimpleDB::Client::Exception::BEGIN@3";
+"SimpleDB::Client::Exception::BEGIN@50" -> "Exception::Class::BEGIN@3";
+"Exception::Class::import" -> "Exception::Class::_make_parents";
+"SimpleDB::Client::Exception::BEGIN@50" -> "Exception::Class::BEGIN@8";
+"SimpleDB::Client::Exception::BEGIN@50" -> "Exception::Class::BEGIN@11";
+"Exception::Class::BEGIN@7" -> "Exception::Class::Base::BEGIN@4";
+"SimpleDB::Client::Exception::BEGIN@50" -> "Exception::Class::BEGIN@78";
+"Exception::Class::_make_subclass" -> "SimpleDB::Client::Exception::Response::BEGIN@3";
+"Exception::Class::BEGIN@7" -> "Exception::Class::Base::BEGIN@3";
+"Exception::Class::BEGIN@78" -> "strict::unimport";
+"Exception::Class::BEGIN@168" -> "strict::unimport";
+"Exception::Class::BEGIN@45" -> "strict::unimport";
+"SimpleDB::Client::Exception::BEGIN@50" -> "Exception::Class::import";
+"SimpleDB::Client::Exception::BEGIN@50" -> "Exception::Class::BEGIN@5";
+"Exception::Class::_make_subclass" -> "UNIVERSAL::isa";
+"Exception::Class::BEGIN@7" -> "Exception::Class::Base::BEGIN@30";
+"Exception::Class::BEGIN@7" -> "Exception::Class::Base::BEGIN@8";
+"Exception::Class::import" -> "Exception::Class::CORE:sort";
+"Exception::Class::_make_subclass" -> "Exception::Class::CORE:subst";
+"SimpleDB::Client::Exception::BEGIN@50" -> "Exception::Class::BEGIN@45";
+"SimpleDB::Client::Exception::BEGIN@50" -> "Exception::Class::BEGIN@7";
+"Exception::Class::BEGIN@7" -> "Exception::Class::Base::BEGIN@43";
+"Exception::Class::BEGIN@5" -> "strict::import";
+}
