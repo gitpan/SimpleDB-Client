@@ -25,4 +25,4 @@ requires:
   Time::HiRes: 1.9719
   URI: 0
   XML::Bare: 0.45
-version: 1.0401
+version: 1.0402

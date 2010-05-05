@@ -1,5 +1,5 @@
 package SimpleDB::Client::Exception;
-our $VERSION = '1.0401';
+our $VERSION = '1.0402';
 
 =head1 NAME
 
@@ -7,7 +7,7 @@ SimpleDB::Client::Exception - Exceptions thrown by SimpleDB::Client.
 
 =head1 VERSION
 
-version 1.0401
+version 1.0402
 
 =head1 DESCRIPTION
 
