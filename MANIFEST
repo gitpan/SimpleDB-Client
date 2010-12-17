@@ -492,18 +492,18 @@ author.t/nytprof/XML-Simple-pm-sub.html
 author.t/nytprof/XSLoader-pm-block.html
 author.t/nytprof/XSLoader-pm-line.html
 author.t/nytprof/XSLoader-pm-sub.html
-author.t/nytprof/accessor access_key defined at -lib-SimpleDB-Client-pm-block.html
-author.t/nytprof/accessor access_key defined at -lib-SimpleDB-Client-pm-line.html
-author.t/nytprof/accessor access_key defined at -lib-SimpleDB-Client-pm-sub.html
-author.t/nytprof/accessor secret_key defined at -lib-SimpleDB-Client-pm-block.html
-author.t/nytprof/accessor secret_key defined at -lib-SimpleDB-Client-pm-line.html
-author.t/nytprof/accessor secret_key defined at -lib-SimpleDB-Client-pm-sub.html
-author.t/nytprof/accessor simpledb_uri defined at -lib-SimpleDB-Client-pm-block.html
-author.t/nytprof/accessor simpledb_uri defined at -lib-SimpleDB-Client-pm-line.html
-author.t/nytprof/accessor simpledb_uri defined at -lib-SimpleDB-Client-pm-sub.html
-author.t/nytprof/accessor user_agent defined at -lib-SimpleDB-Client-pm-block.html
-author.t/nytprof/accessor user_agent defined at -lib-SimpleDB-Client-pm-line.html
-author.t/nytprof/accessor user_agent defined at -lib-SimpleDB-Client-pm-sub.html
+'author.t/nytprof/accessor access_key defined at -lib-SimpleDB-Client-pm-block.html'
+'author.t/nytprof/accessor access_key defined at -lib-SimpleDB-Client-pm-line.html'
+'author.t/nytprof/accessor access_key defined at -lib-SimpleDB-Client-pm-sub.html'
+'author.t/nytprof/accessor secret_key defined at -lib-SimpleDB-Client-pm-block.html'
+'author.t/nytprof/accessor secret_key defined at -lib-SimpleDB-Client-pm-line.html'
+'author.t/nytprof/accessor secret_key defined at -lib-SimpleDB-Client-pm-sub.html'
+'author.t/nytprof/accessor simpledb_uri defined at -lib-SimpleDB-Client-pm-block.html'
+'author.t/nytprof/accessor simpledb_uri defined at -lib-SimpleDB-Client-pm-line.html'
+'author.t/nytprof/accessor simpledb_uri defined at -lib-SimpleDB-Client-pm-sub.html'
+'author.t/nytprof/accessor user_agent defined at -lib-SimpleDB-Client-pm-block.html'
+'author.t/nytprof/accessor user_agent defined at -lib-SimpleDB-Client-pm-line.html'
+'author.t/nytprof/accessor user_agent defined at -lib-SimpleDB-Client-pm-sub.html'
 author.t/nytprof/auto-Compress-Raw-Zlib-autosplit-ix-block.html
 author.t/nytprof/auto-Compress-Raw-Zlib-autosplit-ix-line.html
 author.t/nytprof/auto-Compress-Raw-Zlib-autosplit-ix-sub.html
@@ -520,16 +520,16 @@ author.t/nytprof/constant-pm-block.html
 author.t/nytprof/constant-pm-line.html
 author.t/nytprof/constant-pm-sub.html
 author.t/nytprof/data-SimpleDB-Client-author-t-01-HTTP-t.dot
-author.t/nytprof/data-SimpleDB-Client-author-t-accessor access_key defined at -lib-SimpleDB-Client-pm.dot
-author.t/nytprof/data-SimpleDB-Client-author-t-accessor secret_key defined at -lib-SimpleDB-Client-pm.dot
-author.t/nytprof/data-SimpleDB-Client-author-t-accessor simpledb_uri defined at -lib-SimpleDB-Client-pm.dot
-author.t/nytprof/data-SimpleDB-Client-author-t-accessor user_agent defined at -lib-SimpleDB-Client-pm.dot
-author.t/nytprof/data-SimpleDB-Client-author-t-generated method (unknown origin).dot
+'author.t/nytprof/data-SimpleDB-Client-author-t-accessor access_key defined at -lib-SimpleDB-Client-pm.dot'
+'author.t/nytprof/data-SimpleDB-Client-author-t-accessor secret_key defined at -lib-SimpleDB-Client-pm.dot'
+'author.t/nytprof/data-SimpleDB-Client-author-t-accessor simpledb_uri defined at -lib-SimpleDB-Client-pm.dot'
+'author.t/nytprof/data-SimpleDB-Client-author-t-accessor user_agent defined at -lib-SimpleDB-Client-pm.dot'
+'author.t/nytprof/data-SimpleDB-Client-author-t-generated method (unknown origin).dot'
 author.t/nytprof/data-SimpleDB-Client-author-t-lib-SimpleDB-Client-Exception-pm.dot
 author.t/nytprof/data-SimpleDB-Client-author-t-lib-SimpleDB-Client-pm.dot
-author.t/nytprof/generated method (unknown origin)-block.html
-author.t/nytprof/generated method (unknown origin)-line.html
-author.t/nytprof/generated method (unknown origin)-sub.html
+'author.t/nytprof/generated method (unknown origin)-block.html'
+'author.t/nytprof/generated method (unknown origin)-line.html'
+'author.t/nytprof/generated method (unknown origin)-sub.html'
 author.t/nytprof/if-pm-block.html
 author.t/nytprof/if-pm-line.html
 author.t/nytprof/if-pm-sub.html
@@ -790,6 +790,7 @@ author.t/nytprof/warnings-register-pm-sub.html
 author.t/sample.xml
 author.t/xmlbare
 author.t/xmlsimple
+chad.patch
 dist.ini
 lib/SimpleDB/Client.pm
 lib/SimpleDB/Client/Exception.pm
