@@ -1,6 +1,0 @@
-use XML::Simple;
-use 5.010;
-use Data::Dumper;
-
-say Dumper XMLin('sample.xml', ForceArray => ['Item']);
-

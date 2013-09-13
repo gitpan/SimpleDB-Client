@@ -4,39 +4,55 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'The network interface to the SimpleDB service.',
-  'AUTHOR' => 'JT Smith <RIZEN@cpan.org>',
-  'BUILD_REQUIRES' => {},
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "ABSTRACT" => "The network interface to the SimpleDB service.",
+  "AUTHOR" => "JT Smith <RIZEN\@cpan.org>",
+  "BUILD_REQUIRES" => {},
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'SimpleDB-Client',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'SimpleDB::Client',
-  'PREREQ_PM' => {
-    'Crypt::SSLeay' => '0.57',
-    'Digest::SHA' => '0',
-    'Exception::Class' => '0',
-    'LWP' => '5.834',
-    'Moose' => '0.93',
-    'Test::Deep' => '0',
-    'Test::More' => '0',
-    'Time::HiRes' => '1.9719',
-    'URI' => '0',
-    'XML::Fast' => '0.10'
+  "DISTNAME" => "SimpleDB-Client",
+  "EXE_FILES" => [
+    "bin/simpledb"
+  ],
+  "LICENSE" => "perl",
+  "NAME" => "SimpleDB::Client",
+  "PREREQ_PM" => {
+    "Crypt::SSLeay" => "0.57",
+    "Digest::SHA" => 0,
+    "Exception::Class" => 0,
+    "LWP" => "5.834",
+    "Moose" => "0.93",
+    "Test::Deep" => 0,
+    "Test::More" => 0,
+    "Time::HiRes" => "1.9719",
+    "URI" => 0,
+    "XML::Fast" => "0.10"
   },
-  'VERSION' => '1.0500',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "TEST_REQUIRES" => {},
+  "VERSION" => "1.0600",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
+  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
+  for my $mod ( keys %$tr ) {
+    if ( exists $br->{$mod} ) {
+      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
+    }
+    else {
+      $br->{$mod} = $tr->{$mod};
+    }
+  }
+}
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
   my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};

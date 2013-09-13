@@ -1,6 +1,6 @@
 package SimpleDB::Client;
-BEGIN {
-  $SimpleDB::Client::VERSION = '1.0500';
+{
+  $SimpleDB::Client::VERSION = '1.0600';
 }
 
 =head1 NAME
@@ -9,7 +9,7 @@ SimpleDB::Client - The network interface to the SimpleDB service.
 
 =head1 VERSION
 
-version 1.0500
+version 1.0600
 
 =head1 SYNOPSIS
 

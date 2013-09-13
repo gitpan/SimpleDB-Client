@@ -1,11 +1,11 @@
 
 
 This archive contains the distribution SimpleDB-Client,
-version 1.0500:
+version 1.0600:
 
   The network interface to the SimpleDB service.
 
-This software is copyright (c) 2010 by Plain Black Corporation.
+This software is copyright (c) 2013 by Plain Black Corporation.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
